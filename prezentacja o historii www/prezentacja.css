@@ -1,0 +1,330 @@
+html {
+  background-color: rgb(36, 36, 43);
+  background-image: linear-gradient(50deg, rgb(13, 34, 15), rgb(36, 36, 43));
+  background-repeat: no-repeat;
+}
+
+
+.limit {
+  max-width: 1500px;
+  position: relative;
+  margin: auto;
+  
+}
+
+
+.slajdy {
+  display: none;
+  height: 900px;
+    
+}
+.slajdy.tytulowy {
+  height: 1015px;
+}
+h1 {
+  font-size: 100px;
+  text-shadow: 5px 5px 0 rgb(138, 168, 135);
+}
+h4, p{
+  text-shadow: 2px 2px 0 rgb(138, 168, 135);
+}
+
+
+img {
+    height: 350px;
+    
+}
+ul {
+  list-style: circle;
+}
+
+.text li a {
+  text-decoration: none;
+  color: #57aa62;
+  text-shadow: none;
+}
+.text li a:hover {
+  color: #2faa3f;
+}
+
+
+.back, .next {
+ background-color: rgb(19, 44, 17);
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: 380px;
+  padding-left: 371px;
+  padding-right: 371px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  color: rgb(255, 255, 255);
+  
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.5s ease;
+  border-radius: 10px 0px 0px 10px;
+  user-select: none;
+}
+
+
+.next {
+  left: 700px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+.back:hover, .next:hover {
+  color: rgb(116, 204, 128);
+}
+
+
+.text {
+  font-family: sans-serif;
+  color: white;
+  font-size: 20px;
+  padding-top: -20px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 0 rgb(138, 168, 135);
+}
+.text li {
+  text-align: left;
+}
+.text li:hover, .text h4:hover {
+ color: #598f61;
+ text-shadow: 2px 2px 0 #227c2e;
+}
+.text ul .first img {
+  transform: translateY(-80px);
+  height: 250px;
+  width: 350px;
+  
+  float: right;
+  border-radius: 10px 10px 10px 10px;
+}
+.text ul .specialimg img{
+  transform: translateY(-80px);
+  margin-top: 20px;
+  height: 400px;
+  width: 50%;
+  
+  float: right;
+  border-radius: 10px 10px 10px 10px;
+}
+.text ul .second img {
+  transform: translateY(20px) translateX(350px);
+  border-radius: 10px 10px 10px 10px;
+  height: 250px;
+  width: 350px;
+  
+  float: right;
+}
+.text ul .third img {
+  transform: translateY(-70px) translateX(0px);
+  border-radius: 10px 10px 10px 10px;
+  height: 250px;
+  width: 350px;
+  
+  float: right;
+}
+
+.nr {
+  color: #329940;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+
+.przejscie {
+  animation-name: przejscie;
+  animation-duration: 2s;
+}
+
+@keyframes przejscie {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+
+
+
+.CSS img[alt="easteregg"] {
+  position: relative;
+    z-index: 99;
+    transform: translateX(-300px) translateY(0px) rotate(-90deg)
+}
+.CSS img[alt="easteregg"] {
+  height: auto;
+  width: 25px;
+  
+  
+  margin-left: 1980px;
+  top: 500px;
+  
+  
+  
+
+  animation-duration: 2s;
+  animation-name: ee-anim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+.street img[alt="easteregg"] > * {
+  margin-left: 0px;
+}
+@keyframes ee-anim {
+  from {
+      top: 300;
+  }
+  to {
+      top: -1700px;
+  }
+}
+.CSS img[alt="CSS"] {
+  position: relative;
+    z-index: 99;
+    
+}
+.CSS img[alt="CSS"] {
+  
+  
+  height: auto;
+  width: auto;
+  
+  top: 0px;
+  
+  
+  
+
+  animation-duration: 3s;
+  animation-name: css-anim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+@keyframes css-anim {
+  0% {opacity: 100%;}
+  20% {opacity: 80%;}
+  40% {opacity: 40%;}
+  60% {opacity: 0%;}
+  80% {opacity: 40%;}
+  100% {opacity: 80%;}
+}
+img {
+  
+  
+  height: auto;
+  width: auto;
+  
+  top: 0px;
+  
+  
+  
+ 
+  animation-duration: 7s;
+  animation-name: img-in;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes img-in {
+  0% {opacity: 0%;}
+  50% {opacity: 50%;}
+  100% {opacity: 100%;}
+}
+h4 {
+  
+  
+  height: auto;
+  width: auto;
+  
+  top: 0px;
+  
+  
+  
+
+  animation-duration: 3s;
+  animation-name: h4-in;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes h4-in {
+  0% {opacity: 0%;}
+  50% {opacity: 50%;}
+  100% {opacity: 100%;}
+}
+ul, li, p {
+  
+  
+  height: auto;
+  width: auto;
+  
+  top: 0px;
+  
+  
+  
+  
+  animation-duration: 4s;
+  animation-name: text-in;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes text-in {
+  0% {opacity: 0%;}
+  50% {opacity: 50%;}
+  100% {opacity: 100%;}
+}
+.CSS img[alt="cssfly"] {
+  position: relative;
+    z-index: 1;
+    transform: translateX(-300px) translateY(-700px)
+}
+.CSS img[alt="cssfly"] {
+  height: auto;
+  width: 50px;
+  
+  
+  margin-left: -100px;
+ right: 500px;
+  
+  
+  
+
+  animation-duration: 3s;
+  animation-name: fly-anim;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite
+}
+
+
+@keyframes fly-anim {
+  from {
+      right: 300;
+  }
+  to {
+     right: -1700px;
+  }
+}
+.cytat {
+  font-style: italic;
+  font-weight: bold;
+}
+.cytat:hover {
+  color: #41914d;
+  text-shadow: 2px 2px 0 #428b4db2;
+}
+.kill {
+  font-size: 10px;
+  color: #20802d;
+}
