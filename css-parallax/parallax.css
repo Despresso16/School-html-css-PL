@@ -1,0 +1,104 @@
+html {
+    background-color: #00003C;
+
+}
+#scene {
+}
+
+@keyframes para1 {
+    from {
+        left: 0;
+    }
+    to {
+        left: -2000px;
+    }
+}
+
+@keyframes para1-street {
+    from {
+        left: 0;
+    }
+    to {
+        left: -2800px;
+    }
+}
+
+
+.player {
+    width: 71px;
+    height: 67px;
+    background-image: url("./run-preview.gif");
+    background-repeat: no-repeat;
+}
+
+#area {
+    background-image: url("./background/skyline-a.png");
+    background-repeat: repeat-x;
+    background-color: #00003C;
+}
+
+.buildings-bg {
+    background-image: url("./background/buildings-bg.png");
+    background-repeat: repeat-x;
+    position: absolute;
+    height: 164px;
+}
+.buildings-near {
+    background-image: url("./background/near-buildings-bg.png");
+    background-repeat: repeat-x;
+    transform: scale(140%);
+    position: absolute;
+    height: 164px;
+    width: 100%;
+}
+
+.street{
+    position: absolute;
+    top: 180px;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 900px;
+}
+.street > * {
+    display: inline-block;
+    float: left;
+    vertical-align: bottom;
+}
+
+.sidewalk {
+    position: absolute;
+    top: 379px;
+    left: 0;
+    background-image: url("sidewalk.png");
+    background-repeat: repeat-x;
+    z-index: 100;
+    width: 4000px;
+    height: 40px;
+
+}
+.antennas {
+    position: absolute;
+    top: 283px;
+    left: 0;
+    z-index: 24;
+    width: 500px;
+    padding-left: 250px;
+
+    animation-duration: 3s;
+    animation-name: antenas-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.antennas > * {
+    margin-left: 200px;
+}
+
+@keyframes antenas-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -500px;
+    }
+}

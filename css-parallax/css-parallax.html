@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>CSS dojo</title>
+    <link href="../helper-dom-checker/common.css" rel="stylesheet">
+    <script src="../helper-dom-checker/dom-checker.js"></script>
+    <link href="parallax.css" rel="stylesheet">
+
+    <style>
+        /* tu wprowadzaj swój kod CSS */
+        html {
+    background-image: linear-gradient(to bottom, #00003C, #5e009c6e );
+
+}
+        .player {
+            margin-top: -20px;
+            margin-left: 900px;
+            position: relative;
+            z-index: 99;
+            
+        }
+        .antennas{
+            width: 3000px;
+            padding-left: 1600px;
+            animation-duration: 8s;
+            left: 800px;
+            
+            z-index: 100;
+
+
+        }
+        #area {
+            margin-left: -70px;
+            margin-top: -290px;
+            width: 3000px;
+            transform: translateX(-140px) translateY(250px)
+            
+        }
+        .buildings-bg {
+            width: 2000px;
+            transform: translateX(20px) translateY(160px);
+            position: relative;
+
+        }
+        
+        .buildings-near {
+            width: 2000px;
+            transform: translateX(10px) translateY(50px);
+            position: relative;
+        }
+        .sidewalk {
+            margin-top: -15px;
+        }
+
+
+
+
+
+
+
+        
+        .under7 {
+            background-image: url("./background/buildings-bg.png");
+            margin-left: -100px;
+           background-repeat: repeat-x;
+            margin-top: -5px;
+            margin-bottom: -500px;
+            height: 100px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+            
+        }
+        
+         .under8 {
+            background-image: url("./background/near-buildings-bg.png");
+            margin-left: -600px;
+           background-repeat: repeat-x;
+            margin-top: 350px;
+            height: 200px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+        }
+         .under5 {
+            background-image: url("./background/buildings-bg.png");
+            margin-left: -50px;
+           background-repeat: repeat-x;
+            margin-top: -50px;
+            margin-bottom: -500px;
+            height: 100px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+            
+        }
+        .under6 {
+            background-image: url("./background/near-buildings-bg.png");
+            margin-left: -400px;
+           background-repeat: repeat-x;
+            margin-top: 360px;
+            height: 200px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+        }
+        .under3 {
+            background-image: url("./background/buildings-bg.png");
+            margin-left: -130px;
+           background-repeat: repeat-x;
+            margin-top: 450px;
+            margin-bottom: -500px;
+            height: 100px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+            
+        }
+        .under4 {
+            background-image: url("./background/near-buildings-bg.png");
+            margin-left: -77px;
+           background-repeat: repeat-x;
+            margin-top: 350px;
+            height: 200px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+        }
+        .under1 {
+            background-image: url("./background/buildings-bg.png");
+            margin-left: -200px;
+           background-repeat: repeat-x;
+            margin-top: -270px;
+            margin-bottom: -500px;
+            height: 100px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            
+            
+        }
+        .under2 {
+            background-image: url("./background/near-buildings-bg.png");
+            margin-left: -200px;
+           background-repeat: repeat-x;
+            margin-top: 350px;
+            height: 200px;
+            width: 2500px;
+            transform: translateX(-130px) translateY(600px);
+            position: relative;
+            margin-bottom: -500px;
+            
+        }
+        
+        .antennas > * {
+    margin-left: -500px;
+}
+        @keyframes antenas-anim {
+    from {
+        left: -100;
+    }
+    to {
+        left: -1100px;
+    }
+}
+
+.sidewalk {
+   
+    width: 3500px;
+    position: absolute;
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 4.6s;
+    animation-name: sidewalk-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;  
+}
+
+.sidewalk > * {
+    margin-left: -500px;
+}
+@keyframes sidewalk-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+/*uwaga na oczy */
+.under1 {
+   
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 4s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under1 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under2 {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 4s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under2 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under3 {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 3.5s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under3 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under4 {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 3.5s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under4 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under5 {
+   
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 3s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under5 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under6 {
+   
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 3s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under6 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under7 {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 2.5s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under7 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.under8 {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 100;
+    
+    padding-left: -800px;
+
+    animation-duration: 2.5s;
+   
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.under8 > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -4000px;
+    }
+}
+
+/* under skonczone */
+.buildings-near {
+    
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 0;
+    
+    padding-left: -800px;
+
+    animation-duration: 20s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.buildings-near > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.buildings-bg {
+    border-image-repeat: round;
+    width: 4000px;
+    
+    
+    left: 200px;
+    z-index: 0;
+    
+    padding-left: -800px;
+
+    animation-duration: 40s;
+    animation-name: u1-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.buildings-bg > * {
+    margin-left: -500px;
+}
+@keyframes u1-anim {
+    from {
+        left: 0;
+    }
+    to {
+        left: -1100px;
+    }
+}
+.street img[alt="Police"] {
+    position: absolute;
+    transform: translateX(1100px) translateY(-60px)
+    
+}
+    
+.street img[alt="Police"] {
+    height: auto;
+    width:40px;
+    
+    
+    
+    left: 1000px;
+    z-index: 0;
+    
+    padding-left: -1800px;
+
+    animation-duration: 8.8s;
+    animation-name: police-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Police"] > * {
+    margin-left: -500px;
+}
+@keyframes police-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1300px;
+    }
+}
+.street img[alt="Police2"] {
+    position: absolute;
+    transform: translateX(1150px) translateY(-80px)
+    
+}
+    
+.street img[alt="Police2"] {
+    height: auto;
+    width:40px;
+    
+    
+    
+    left: 1000px;
+    z-index: 0;
+    
+    padding-left: -1800px;
+
+    animation-duration: 8.7s;
+    animation-name: police-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Police2"] > * {
+    margin-left: -500px;
+}
+@keyframes police-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1300px;
+    }
+}
+.street img[alt="Police3"] {
+    position: absolute;
+    transform: translateX(1000px) translateY(-66px)
+    
+}
+.street img[alt="Police3"] {
+    height: auto;
+    width:30px;
+    
+    
+    
+    left: 1000px;
+    z-index: 0;
+    
+    padding-left: -1800px;
+
+    animation-duration: 7.9s;
+    animation-name: police-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Police3"] > * {
+    margin-left: -500px;
+}
+@keyframes police-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1300px;
+    }
+}
+.street img[alt="Red"] {
+    position: absolute;
+    transform: translateX(900px) translateY(-30px)
+    
+}
+.street img[alt="Red"] {
+    height: auto;
+    width:50px;
+    
+    
+    
+    left: 1000px;
+    z-index: 0;
+    
+    padding-left: -1800px;
+
+    animation-duration: 8s;
+    animation-name: red-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Red"] > * {
+    margin-left: -500px;
+}
+@keyframes red-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1300px;
+    }
+}
+.street img[alt="Truck"] {
+    position: absolute;
+    transform: translateX(1000px) translateY(-20px)
+    
+}
+.street img[alt="Truck"] {
+    height: auto;
+    width:300px;
+    
+    
+    
+    left: 1000px;
+    z-index: 1;
+    
+    padding-left: -1800px;
+
+    animation-duration: 10s;
+    animation-name: truck-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Truck"] > * {
+    margin-left: -500px;
+}
+@keyframes truck-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1300px;
+    }
+}
+.street img[alt="Yellow"] {
+    position: absolute;
+    transform: translateX(1600px) translateY(-70px)
+    
+}
+.street img[alt="Yellow"] {
+    height: auto;
+    width:80px;
+    
+    
+    
+    left: 1000px;
+    z-index: 2;
+    
+    padding-left: -1800px;
+
+    animation-duration: 4s;
+    animation-name: yellow-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Yellow"] > * {
+    margin-left: -500px;
+}
+@keyframes yellow-anim {
+    from {
+        left: 300;
+    }
+    to {
+        left: -1700px;
+    }
+}
+
+.street img[alt="Police4"] {
+    position: relative;
+    z-index: 99;
+    transform: translateX(-700px) translateY(-40px) scaleX(-1);
+    
+    
+}
+.street img[alt="Police4"] {
+    height: auto;
+    width:auto;
+    
+    
+    
+    right: 230px;
+    
+    
+    
+
+    animation-duration: 800s;
+    animation-name: police4-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Police4"] > * {
+    margin-left: 0px;
+}
+@keyframes police4-anim {
+    from {
+        right: 300;
+    }
+    to {
+        right: -1700px;
+    }
+}
+.street img[alt="Rocket"] {
+    position: absolute;
+    transform: translateX(400px) translateY(70px) rotate(90deg)
+    
+}
+.street img[alt="Rocket"] {
+    height: auto;
+    width:35px;
+    
+    
+    
+   top: 0px;
+    z-index: -1;
+    
+    padding-left: 0px;
+animation-delay: 5s;
+    animation-duration: 30s;
+    animation-name: rocket-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Rocket"] > * {
+    margin-left: 0px;
+}
+@keyframes rocket-anim {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1100px;
+    }
+}
+.street img[alt="Rocket2"] {
+    position: absolute;
+    transform: translateX(-100px) translateY(70px) rotate(90deg)
+    
+}
+.street img[alt="Rocket2"] {
+    height: auto;
+    width:20px;
+    
+    
+    
+   top: 0px;
+    z-index: -1;
+    
+    padding-left: 0px;
+
+    animation-duration: 25s;
+    animation-name: rocket-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Rocket2"] > * {
+    margin-left: 0px;
+}
+@keyframes rocket-anim {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1100px;
+    }
+}
+.street img[alt="Rocket3"] {
+    position: absolute;
+    transform: translateX(-300px) translateY(60px) rotate(90deg)
+    
+}
+.street img[alt="Rocket3"] {
+    height: auto;
+    width:15px;
+    
+    
+    
+   top: 0px;
+    z-index: -1;
+    
+    padding-left: 0px;
+    animation-delay: 10s;
+    animation-duration: 20s;
+    animation-name: rocket-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Rocket3"] > * {
+    margin-left: 0px;
+}
+@keyframes rocket-anim {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1100px;
+    }
+}
+.street img[alt="Rocket4"] {
+    position: absolute;
+    transform: translateX(-290px) translateY(70px) rotate(90deg)
+    
+}
+.street img[alt="Rocket4"] {
+    height: auto;
+    width:15px;
+    
+    
+    
+   top: 0px;
+    z-index: -1;
+    
+    padding-left: 0px;
+    animation-delay: 10s;
+    animation-duration: 20s;
+    animation-name: rocket-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Rocket4"] > * {
+    margin-left: 0px;
+}
+@keyframes rocket-anim {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1100px;
+    }
+}
+.street img[alt="Rocket5"] {
+    position: absolute;
+    transform: translateX(-310px) translateY(70px) rotate(90deg)
+    
+}
+.street img[alt="Rocket5"] {
+    height: auto;
+    width:15px;
+    
+    
+    
+   top: 0px;
+    z-index: -1;
+    
+    padding-left: 0px;
+    animation-delay: 10s;
+    animation-duration: 20s;
+    animation-name: rocket-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="Rocket5"] > * {
+    margin-left: 0px;
+}
+@keyframes rocket-anim {
+    from {
+        top: 0;
+    }
+    to {
+        top: -1100px;
+    }
+}
+.street img[alt="RUN"] {
+    position: relative;
+    z-index: 99;
+    transform: translateX(-300px) translateY(0px) 
+    
+    
+}
+.street img[alt="RUN"] {
+    height: auto;
+    width:50px;
+    
+    
+    
+    right: 230px;
+    
+    
+    
+
+    animation-duration: 700s;
+    animation-name: amogus-anim;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite
+}
+
+.street img[alt="RUN"] > * {
+    margin-left: 0px;
+}
+@keyframes amogus-anim {
+    from {
+        right: 300;
+    }
+    to {
+        right: -1700px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+        /* poniżej nie wprowadzaj CSS */
+    </style>
+</head>
+<body>
+
+<div id="scene">
+<main id="area">
+    
+    <div class="buildings-bg"></div>
+    <div class="buildings-near"></div>
+    <div class="street">
+        <img src="vehicles/v-police.png" alt="Police">
+        <img src="vehicles/v-police.png" alt="Police2">
+        <img src="drone-1.png" alt="Police3">
+        <img src="vehicles/v-red.png" alt="Red">
+        <img src="vehicles/v-truck.png" alt="Truck">
+        <img src="vehicles/v-yellow.png" alt="Yellow">
+        <img src="drone-1.png" alt="Police4">
+        <img src="vehicles/v-red.png" alt="Rocket">
+        <img src="drone-1.png" alt="Rocket2">
+        <img src="vehicles/v-police.png" alt="Rocket3">
+        <img src="vehicles/v-police.png" alt="Rocket4">
+        <img src="vehicles/v-police.png" alt="Rocket5">
+        <img src="https://art.ngfiles.com/images/1721000/1721467_sansariff_16-bit-among-us-walk.gif?f1617067882" alt="RUN">
+
+    </div>
+    <div class="player"></div>
+    <div class="antennas">
+        <img src="antenna.png" alt="Antenna">
+    </div>
+    <div id="skyline">
+        
+            
+        </div>
+    </div>
+    <div class="sidewalk"></div>
+<div></div>
+
+    
+</div>
+
+<div class="under1"></div>
+<div class="under2"></div>
+<div class="under3"></div>
+<div class="under4"></div>
+<div class="under5"></div>
+<div class="under6"></div>
+<div class="under7"></div>
+<div class="under8"></div>
+
+    </div>
+    <div
+    
+
+</main>
+
+</div>
+
+</body>
+</html>
