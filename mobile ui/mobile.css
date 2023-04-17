@@ -28,38 +28,43 @@ nav {
     padding-left: 5%;
     padding-top: 5%;
     font-size: 20px;
+    margin-bottom: 10px;
 
 }
-#search {
+#search, input {
     background-color: rgb(77, 77, 77);
-    width: 50%;
-    height: 30px;
+    width: 80%;
+    
+    margin-right: 20%;
+    height: 40px;
     border: 1px rgb(77, 77, 77) solid;
     border-radius: 3% 3% 3% 3%;
     color: 	rgb(98, 175, 255);
-    display: flex;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 10px;
+    
+    
 }
-svg {
+td svg {
     position: absolute;
-    transform: translateX(150px) translateY(-20px);
+    transform: translateX(0px) translateY(-10px);
+    
 }
 input::placeholder {
     color: rgb(98, 175, 255) ;
+}
+a {
+    text-decoration: none;
+    color: rgb(29, 140, 255) ;
 }
 
 .ball {
     width: 200px;
     height: 200px;
     margin: 10px;
-    margin-left: 30%;
-    margin-right: 30%;
     background-color: rgb(29, 140, 255);
     border-radius: 100%;
     display: flex;
     justify-content: center;
+    
     
 }
 .ball h2 {
@@ -67,13 +72,14 @@ input::placeholder {
     text-align: center;
     margin-top: 40%;
     
+    
 }
 ul {
     margin: 20px;
 }
 li {
     list-style: none;
-    margin: 5px;
+    
 }
 li a {
     text-decoration: none;
@@ -82,8 +88,92 @@ li a {
     
     
 }
+li a:hover {
+    animation-name: textcolor;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
 
-
-.infinity svg {
-    transform: translateX(175px) translateY(250px);
 }
+@keyframes textcolor {
+    0% {
+        color: rgb(29, 140, 255);
+        text-shadow: none;
+    
+    
+    }
+    50% {
+        color: rgb(0, 123, 255);
+        text-shadow: 5px 5px 1px rgba(0, 123, 255, 0.548);
+    }
+    100% {
+        color: rgb(29, 140, 255);
+        text-shadow: none;
+    }
+
+}
+table {
+    width: 100%;
+    
+}
+
+
+svg {
+    margin: 0;
+    padding: 0;
+}
+span svg {
+   padding: 10px;
+}
+.ball:hover {
+    animation-name: ball;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes ball {
+    0% {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        opacity: 1;
+        text-shadow: none;
+
+    
+    
+    }
+    50% {
+        width: 220px;
+        height: 220px;
+        margin: 0px;
+        opacity: 0.5;
+        text-shadow: 2px 2px 1px rgb(29, 140, 255);
+    }
+    100% {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        opacity: 1;
+        text-shadow: none;
+    }
+
+}
+svg:hover {
+    animation-name: svgs;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes svgs {
+    0% {
+        filter: blur(0px) saturate(1)
+    }
+    50% {
+        filter: blur(2px) saturate(5)
+    }
+    100% {
+        filter: blur(0px) saturate(1)
+    }
+}
+
+
