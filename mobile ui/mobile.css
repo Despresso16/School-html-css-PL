@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: Arial;
+    transition: 0.3s;
 
 }
 body {
@@ -10,7 +11,8 @@ body {
 .screen {
     max-width: 50%;
     height: 1000px;
-    border-radius: 10% 10% 10% 10% ;
+    border: 20vw rgb(65, 65, 65);
+    border-radius: 30px  ;
     background-color: 	black;
     color: 	rgb(29, 140, 255);
     margin-left: 25%;
@@ -31,7 +33,7 @@ nav {
     margin-bottom: 10px;
 
 }
-#search, input {
+#search, input{
     background-color: rgb(77, 77, 77);
     width: 80%;
     
@@ -43,6 +45,10 @@ nav {
     
     
 }
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s, padding 600000s 0s;
+}
+
 td svg {
     position: absolute;
     transform: translateX(0px) translateY(-10px);
@@ -60,17 +66,21 @@ a {
     width: 200px;
     height: 200px;
     margin: 10px;
-    background-color: rgb(29, 140, 255);
+    border: 5px rgb(29, 140, 255) solid;
     border-radius: 100%;
     display: flex;
     justify-content: center;
-    
+    overflow: hidden;
+    background-image: linear-gradient(to top, rgb(29, 140, 255), black);
+    transition: 0.5s;
     
 }
+
 .ball h2 {
-    color: black;
+    color: rgb(0, 123, 255);
     text-align: center;
     margin-top: 40%;
+    text-shadow: 2px 2px 0 black;
     
     
 }
@@ -88,7 +98,7 @@ li a {
     
     
 }
-li a:hover {
+li a:active, li a:hover {
     animation-name: textcolor;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -125,7 +135,7 @@ svg {
 span svg {
    padding: 10px;
 }
-.ball:hover {
+.ball:hover, .ball:active {
     animation-name: ball;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -133,32 +143,17 @@ span svg {
 }
 @keyframes ball {
     0% {
-        width: 200px;
-        height: 200px;
-        margin: 10px;
-        opacity: 1;
-        text-shadow: none;
-
-    
-    
+        transform: scale(100%);
     }
     50% {
-        width: 220px;
-        height: 220px;
-        margin: 0px;
-        opacity: 0.5;
-        text-shadow: 2px 2px 1px rgb(29, 140, 255);
+        transform: scale(110%);
     }
     100% {
-        width: 200px;
-        height: 200px;
-        margin: 10px;
-        opacity: 1;
-        text-shadow: none;
+        transform: scale(100%);
     }
 
 }
-svg:hover {
+svg:hover, svg:active {
     animation-name: svgs;
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -167,6 +162,7 @@ svg:hover {
 @keyframes svgs {
     0% {
         filter: blur(0px) saturate(1)
+        
     }
     50% {
         filter: blur(2px) saturate(5)
@@ -176,4 +172,541 @@ svg:hover {
     }
 }
 
+@media only screen and (max-width: 992px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial;
+        transition: 0.3s;
+    
+    }
+    body {
+        background-color: white
+    }
+    .screen {
+        width: 70%;
+        max-width: 70%;
+        height: 1000px;
+        border: 20vw rgb(65, 65, 65);
+        border-radius: 30px  ;
+        background-color: 	black;
+        color: 	rgb(29, 140, 255);
+        margin-left: 15%;
+        margin-right: 15%;
+        padding: 2%;
+        overflow: hidden;
+        
+    }
+    nav {
+        background-color: rgb(77, 77, 77);
+        height: 50px;
+        width: 120%;
+        margin-left: -5%;
+        margin-top: -5%;
+        padding-left: 5%;
+        padding-top: 5%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    
+    }
+    #search, input {
+        background-color: rgb(77, 77, 77);
+        width: 80%;
+        
+        margin-right: 20%;
+        height: 40px;
+        border: 1px rgb(77, 77, 77) solid;
+        border-radius: 3% 3% 3% 3%;
+        color: 	rgb(98, 175, 255);
+        
+        
+    }
+    td svg {
+        position: absolute;
+        transform: translateX(0px) translateY(-10px);
+        
+    }
+    input::placeholder {
+        color: rgb(98, 175, 255) ;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(29, 140, 255) ;
+    }
+    input:-webkit-autofill, input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s, padding 600000s 0s;
+    }
+    .ball {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border: 5px rgb(29, 140, 255) solid;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background-image: linear-gradient(to top, rgb(29, 140, 255), black);
+        transition: 0.5s;
+        
+    }
+    
+    .ball h2 {
+        color: rgb(0, 123, 255);
+        text-align: center;
+        margin-top: 40%;
+        text-shadow: 2px 2px 0 black;
+        
+        
+    }
+    ul {
+        margin: 20px;
+    }
+    li {
+        list-style: none;
+        
+    }
+    li a {
+        text-decoration: none;
+        color: rgb(29, 140, 255);
+        font-size: 24px;
+        
+        
+    }
+    li a:active, li a:hover {
+        animation-name: textcolor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  
+    
+    }
+    @keyframes textcolor {
+        0% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        
+        
+        }
+        50% {
+            color: rgb(0, 123, 255);
+            text-shadow: 5px 5px 1px rgba(0, 123, 255, 0.548);
+        }
+        100% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        }
+    
+    }
+    table {
+        width: 100%;
+        
+    }
+    
+    
+    svg {
+        margin: 0;
+        padding: 0;
+    }
+    span svg {
+       padding: 10px;
+    }
+    .ball:hover, .ball:active {
+        animation-name: ball;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes ball {
+        0% {
+            transform: scale(100%);
+        }
+        50% {
+            transform: scale(110%);
+        }
+        100% {
+            transform: scale(100%);
+        }
+    
+    }
+    svg:hover, svg:active {
+        animation-name: svgs;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes svgs {
+        0% {
+            filter: blur(0px) saturate(1)
+            
+        }
+        50% {
+            filter: blur(2px) saturate(5)
+        }
+        100% {
+            filter: blur(0px) saturate(1)
+        }
+    } 
+}
 
+
+
+
+@media only screen and (max-width: 768px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial;
+    
+    }
+    body {
+        background-color: black;
+        
+    }
+    .screen {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0% ;
+        background-color: 	black;
+        color: 	rgb(29, 140, 255);
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;
+        
+        
+    }
+    nav {
+        background-color: rgb(77, 77, 77);
+        height: 50px;
+        width: 120%;
+        margin-left: 0%;
+        margin-top: 0%;
+        padding-left: 1%;
+        padding-top: 1%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    
+    }
+    #search, input {
+        background-color: rgb(77, 77, 77);
+        width: 80%;
+        
+        margin-right: 20%;
+        height: 40px;
+        border: 1px rgb(77, 77, 77) solid;
+        border-radius: 3% 3% 3% 3%;
+        color: 	rgb(98, 175, 255);
+        
+        
+    }
+    td svg {
+        position: absolute;
+        transform: translateX(0px) translateY(-10px);
+        
+        
+    }
+    input::placeholder {
+        color: rgb(98, 175, 255) ;
+        
+    }
+    input:-webkit-autofill, input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s, padding 600000s 0s;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(29, 140, 255) ;
+    }
+    
+    .ball {
+        width: 150px;
+        height: 150px;
+        margin: 10px;
+        border: 5px rgb(29, 140, 255) solid;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background-image: linear-gradient(to top, rgb(29, 140, 255), black);
+        
+    }
+    
+    .ball h2 {
+        color: rgb(0, 123, 255);
+        text-align: center;
+        margin-top: 40%;
+        text-shadow: 2px 2px 0 black;
+        font-size: 20px;
+        
+        
+    }
+    ul {
+        margin: 20px;
+    }
+    li {
+        list-style: none;
+        
+    }
+    li a {
+        text-decoration: none;
+        color: rgb(29, 140, 255);
+        font-size: 20px;
+        
+        
+    }
+    li a:active, li a:hover {
+        animation-name: textcolor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  
+    
+    }
+    @keyframes textcolor {
+        0% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        
+        
+        }
+        50% {
+            color: rgb(0, 123, 255);
+            text-shadow: 5px 5px 1px rgba(0, 123, 255, 0.548);
+        }
+        100% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        }
+    
+    }
+    table {
+        width: 100%;
+        
+    }
+    
+    
+    svg {
+        margin: 0;
+        padding: 0;
+        
+    }
+    span svg {
+       padding: 10px;
+    }
+    .ball:active {
+        animation-name: ball;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes ball {
+        0% {
+            transform: scale(100%);
+        }
+        50% {
+            transform: scale(110%);
+        }
+        100% {
+            transform: scale(100%);
+        }
+    }
+    svg:hover, svg:active {
+        animation-name: svgs;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes svgs {
+        0% {
+            filter: blur(0px) saturate(1)
+            
+        }
+        50% {
+            filter: blur(2px) saturate(5)
+        }
+        100% {
+            filter: blur(0px) saturate(1)
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial;
+        transition: 0.3s;
+    
+    }
+    body {
+        background-color: black;
+        
+    }
+    .screen {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0% ;
+        background-color: 	black;
+        color: 	rgb(29, 140, 255);
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 0%;
+        
+        
+    }
+    nav {
+        background-color: rgb(77, 77, 77);
+        height: 50px;
+        width: 120%;
+        margin-left: 0%;
+        margin-top: 0%;
+        padding-left: 1%;
+        padding-top: 1%;
+        font-size: 20px;
+        margin-bottom: 10px;
+    
+    }
+    #search, input {
+        background-color: rgb(77, 77, 77);
+        width: 80%;
+        
+        margin-right: 20%;
+        height: 40px;
+        border: 1px rgb(77, 77, 77) solid;
+        border-radius: 3% 3% 3% 3%;
+        color: 	rgb(98, 175, 255);
+        
+        
+    }
+    td svg {
+        position: absolute;
+        transform: translateX(0px) translateY(-10px);
+        
+        
+    }
+    input::placeholder {
+        color: rgb(98, 175, 255) ;
+        font-size: 15px;
+        
+    }
+    input:-webkit-autofill, input:-webkit-autofill:focus {
+        transition: background-color 600000s 0s, color 600000s 0s, padding 600000s 0s;
+    }
+    a {
+        text-decoration: none;
+        color: rgb(29, 140, 255) ;
+    }
+    
+    .ball {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 5px rgb(29, 140, 255) solid;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        background-image: linear-gradient(to top, rgb(29, 140, 255), black);
+        
+    }
+    
+    .ball h2 {
+        color: rgb(0, 123, 255);
+        text-align: center;
+        margin-top: 40%;
+        text-shadow: 2px 2px 0 black;
+        font-size: 10px;
+        
+        
+    }
+    ul {
+        margin: 20px;
+    }
+    li {
+        list-style: circle;
+        
+    }
+    li a {
+        text-decoration: none;
+        color: rgb(29, 140, 255);
+        font-size: 20px;
+        
+        
+    }
+    li a:active, li a:hover {
+        animation-name: textcolor;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;  
+    
+    }
+    @keyframes textcolor {
+        0% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        
+        
+        }
+        50% {
+            color: rgb(0, 123, 255);
+            text-shadow: 5px 5px 1px rgba(0, 123, 255, 0.548);
+        }
+        100% {
+            color: rgb(29, 140, 255);
+            text-shadow: none;
+        }
+    
+    }
+    table {
+        width: 100%;
+        
+    }
+    
+    
+    svg {
+        margin: 0;
+        padding: 0;
+        display: none;
+        
+    }
+    span svg {
+       padding: 10px;
+    }
+    .ball:active, .ball:hover{
+        animation-name: ball;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes ball {
+        0% {
+            transform: scale(100%);
+        }
+        50% {
+            transform: scale(110%);
+        }
+        100% {
+            transform: scale(100%);
+        }
+    }
+    svg:active, svg:hover {
+        animation-name: svgs;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+    @keyframes svgs {
+        0% {
+            filter: blur(0px) saturate(1)
+            
+        }
+        50% {
+            filter: blur(2px) saturate(5)
+        }
+        100% {
+            filter: blur(0px) saturate(1)
+        }
+    }
+}
