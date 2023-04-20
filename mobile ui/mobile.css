@@ -36,7 +36,7 @@ nav {
 #search, input{
     background-color: rgb(77, 77, 77);
     width: 80%;
-    
+    padding-left: 5%;
     margin-right: 20%;
     height: 40px;
     border: 1px rgb(77, 77, 77) solid;
@@ -97,6 +97,44 @@ li a {
     font-size: 24px;
     
     
+}
+li a span {
+    text-decoration: none;
+    background-color: rgb(29, 140, 255);
+    color: black;
+    border: 2px rgb(29, 140, 255) solid;
+    border-radius: 100%;
+
+    
+    
+}
+li a span:active, li a span:hover{
+    animation-name: notif;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  
+
+}
+@keyframes notif {
+    0% {
+        background-color: rgb(29, 140, 255); 
+        box-shadow: none;
+        opacity: 1;
+        border: 2px rgb(29, 140, 255) solid;
+    }
+    50% {
+        background-color: rgb(0, 123, 255);
+        box-shadow: 5px 5px 2px rgb(0, 123, 255);
+        opacity: 0.7;
+        border: 2px rgb(0, 123, 255) solid;
+        
+    }
+    100% {
+        background-color: rgb(29, 140, 255);
+        box-shadow: none;
+        opacity: 1;
+        border: 2px rgb(29, 140, 255) solid;
+    }
 }
 li a:active, li a:hover {
     animation-name: textcolor;
@@ -390,7 +428,7 @@ svg:hover, svg:active {
     #search, input {
         background-color: rgb(77, 77, 77);
         width: 80%;
-        
+        padding-left: 5%;
         margin-right: 20%;
         height: 40px;
         border: 1px rgb(77, 77, 77) solid;
