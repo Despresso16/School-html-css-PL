@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    font-family: Georgia;
+    transition: 1s;
+}
+p {
+    margin: 20px 0 20px 0;
+}
+body{
+    background-color: maroon;
+}
+.whole {
+ 
+    display: flex;
+}
+.left {
+    width: 30%;
+    height: 600px;
+    background-color: maroon;
+    color: white;
+    
+    
+}
+.left li{
+    list-style: none;
+    margin-left: -30px;
+}
+button.Indigo {
+    background-color: indigo;
+    border: 2px 0 0 2px solid white;
+}
+
+button.SteelBlue{
+    background-color: steelblue;
+    border: 2px 0 0 2px solid white;
+}
+button.Olive{
+    background-color: olive;
+    border: 2px 0 0 2px solid white;
+}
+.right{
+    width: 70%;
+    height: 600px;
+    background-color: maroon;
+    color: white;
+    overflow: scroll;
+    
+    
+}
+.upperright{
+    display: flex;
+}
+.right p {
+    padding: 10px;
+}
+
+.right img {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid white;
+
+}
+.right .list {
+    width: 50%;
+}
+footer {
+    background-color: dimgray;
+    color: white;
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    * {
+        margin: 0;
+        font-family: Georgia;
+        transition: 1s;
+    }
+    p {
+        margin: 15px 0 15px 0;
+        
+    }
+    h1 {
+        font-size: 25px;
+    }
+    button.Indigo {
+        background-color: indigo;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 7px;
+    }
+    
+    button.SteelBlue{
+        background-color: steelblue;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 7px;
+    }
+    button.Olive{
+        background-color: olive;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 7px;
+    }
+    
+    
+    
+    .right img {
+        width: 40%;
+        padding: 10px;
+        border: 1px solid white;
+    }
+    
+    
+}
+
+@media only screen and (max-width: 576px) {
+    * {
+        margin: 0;
+        font-family: Georgia;
+        transition: 1s;
+    }
+    p {
+        margin: 15px 0 15px 0;
+        font-size: 10px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+    button.Indigo {
+        background-color: indigo;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 5px;
+    }
+    
+    button.SteelBlue{
+        background-color: steelblue;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 5px;
+    }
+    button.Olive{
+        background-color: olive;
+        border: 2px 0 0 2px solid white;
+        width: 20%;
+        font-size: 5px;
+    }
+    
+    
+    
+    .right img {
+        width: 35%;
+        padding: 10px;
+        border: 1px solid white;
+    }
+}
